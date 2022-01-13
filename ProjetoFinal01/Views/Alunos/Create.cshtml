@@ -1,0 +1,82 @@
+﻿@model ProjetoFinal01.Models.Aluno
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+ .bg {
+        background: url('https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80') no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100%;
+    }
+
+     th{
+        color: white;
+    }
+
+    td{
+        color: white;
+    }
+
+    h1{
+        color: white;
+    }
+
+      h4{
+        color: white;
+    }
+
+    label{
+        color: white;
+    }
+
+     #create{
+        margin-top: 10px;
+    }
+
+</style>
+<div class="bg">
+<h1>Cadastrar Aluno</h1>
+
+<h4>Aluno</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPF" class="control-label"></label>
+                <input asp-for="CPF" class="form-control" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="professorID" class="control-label"></label>
+                <select asp-for="professorID" class ="form-control" asp-items="ViewBag.professorID"></select>
+            </div>
+            <div class="form-group">
+                <input id="create" type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a style="color:white" asp-action="Index">Voltar para lista.</a>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

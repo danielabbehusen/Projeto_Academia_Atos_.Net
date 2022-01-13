@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProgFit </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjetoFinal01.styles.css" asp-append-version="true" />
+    <link rel="icon" type="imagem/png" href="data:image/jpeg;base64,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" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-info border-bottom box-shadow">
+            <div class="container-fluid">
+                 <img class="navbar-brand" src="https://cdn-icons-png.flaticon.com/512/755/755298.png" style="width: 50px; height:50px;" />
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProgFit</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                   
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Alunos" asp-action="Index">Alunos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Professor" asp-action="Index">Professores</a>
+                        </li>
+
+                         <li class="nav-item" style="margin-left: 910px;">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
+                        </li>
+
+                        
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div >
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+   <footer class=" mt-0 border-top footer text-muted bg-dark ">
+        <div class="container" style="text-align:center;">
+            Academia .NET ATOS/UFN &copy; 2022 | ProgFit | Daniel Abbehusen Miguel Cruz | <a href="https://www.linkedin.com/in/daniel-abbehusen-9721b8190/"> <img style="widht: 20px; height: 20px;" src ="https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1642092789~hmac=63a7da9fe0523f4c51ffacefd3b7e634"/></a>  <a class="link-dark" href="https://github.com/danielabbehusen"> <img style="widht: 20px; height: 20px;" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/> </a>
+            
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+

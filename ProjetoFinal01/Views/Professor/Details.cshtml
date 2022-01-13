@@ -1,0 +1,71 @@
+﻿@model ProjetoFinal01.Models.Professor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+
+  
+    .bg {
+        background: url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100%;
+    }
+
+    th{
+        color: white;
+    }
+
+    td{
+        color: white;
+    }
+
+    h1{
+        color: white;
+    }
+
+    
+      h4{
+        color: white;
+    }
+
+    label{
+        color: white;
+    }
+
+    dt{
+        color: white;
+    }
+
+    dd{
+        color: white;
+    }
+</style> 
+<div class="bg">
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Professor</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CREF)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CREF)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.idProfessor">Editar</a> |
+    <a asp-action="Index">Voltar para a Lista</a>
+</div>
+</div>

@@ -1,0 +1,78 @@
+﻿@model ProjetoFinal01.Models.Professor
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<style>
+
+  
+    .bg {
+        background: url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100%;
+    }
+
+    th{
+        color: white;
+    }
+
+    td{
+        color: white;
+    }
+
+    h1{
+        color: white;
+    }
+
+    
+      h4{
+        color: white;
+    }
+
+    label{
+        color: white;
+    }
+
+    #save{
+        margin-top: 10px;
+    }
+</style> 
+<div class="bg">
+<h1>Editar</h1>
+
+<h4>Professor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idProfessor" />
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CREF" class="control-label"></label>
+                <input asp-for="CREF" class="form-control" />
+                <span asp-validation-for="CREF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input id="save" type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a Lista.</a>
+</div>
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
